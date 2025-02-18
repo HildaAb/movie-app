@@ -21,6 +21,17 @@ h2 {
   margin-bottom: 25px;
 }
 
+.search {
+  background-color: rgb(44, 44, 117);
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0 500px 20px 500px;
+  font-size: 18px;
+  color: goldenrod;
+  border-radius: 8px;
+  border: 1px solid goldenrod;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -28,6 +39,7 @@ main {
 }
 
 .movie {
+  position: relative;
   background-color: rgb(44, 44, 117);
   border-radius: 4px;
   border: 1px solid goldenrod;
@@ -55,4 +67,40 @@ main {
 .movie-info span {
   background-color: rgb(21, 21, 70);
   padding: 0.25rem;
+}
+
+.movie-info span.green {
+  color: green;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  position: absolute;
+  background: rgb(44, 44, 117);
+  margin-bottom: -35px;
+  border: 1px solid goldenrod;
+  color: whitesmoke;
+  max-height: 100%;
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.4s easy-in;
+}
+
+.overview h4 {
+  margin-top: 0;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
 }
